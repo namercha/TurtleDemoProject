@@ -20,16 +20,26 @@ tim = Turtle()
 
 
 # Draw concentric triangle, square, pentagon...decagon
-DEGREES = 360
+# DEGREES = 360
+# colors = ["blue", "cyan", "pale green", "orange", "red", "violet",
+#           "blue violet", "indigo"]
+# for i in range(3, 11):
+#     tim.color(random.choice(colors))
+#     for _ in range(i):
+#         tim.forward(100)
+#         tim.right(DEGREES/i)
+
+
+# Program a random walk using random colors
 colors = ["blue", "cyan", "pale green", "orange", "red", "violet",
           "blue violet", "indigo"]
-for i in range(3, 11):
+directions = [0, 90, 180, 270]
+tim.pensize(15)
+tim.speed("fastest")
+for _ in range(200):
     tim.color(random.choice(colors))
-    for _ in range(i):
-        tim.forward(100)
-        tim.right(DEGREES/i)
-
-
+    tim.forward(40)
+    tim.setheading(random.choice(directions))
 
 screen = Screen()
 screen.exitonclick()
